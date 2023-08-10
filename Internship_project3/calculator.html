@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator || Janvi Vaghela </title>
+    <link rel="shortcut icon" href="logo(janvi).png" type="image/x-icon">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            background:#00203FFF ;
+            display: flex;
+             align-items: center;
+            justify-content: center;
+        }
+        .main_container{
+            background:#2C5F2D;
+            padding: 19px;
+            /* border:1px solid white; */
+            border-radius: 25px;
+
+        }
+        form .part1 input{
+            width:350px;
+            padding-left: 4em;
+            text-align: right;
+            padding-right: 0.5em;
+        }
+        form  input{
+            font-size: 25px;
+            border-radius: 30px;
+            border: 0;
+            width: 40px;
+            height: 40px;
+            outline: 0;
+            background: transparent;
+            box-shadow:-8px -8px 10px rgba(255,255,255,0.1), 4px 4px 6px rgba(0,0,0,0.2)  ;
+            color: white;
+            cursor: pointer;
+            margin: 20px;
+        
+
+        }
+
+        form .part2{
+            padding-top: 1.5em;
+        }
+        form .part2 .second{
+            width: 50px;
+            border-radius: 10px;
+        }
+        form .part2 .first{
+            width: 50px;
+            border-radius: 10px;
+        }
+        form .part2 .third{
+            width: 50px;
+            border-radius: 10px;
+        }
+        form .part2 .four{
+            width: 70px;
+            border-radius: 10px;
+        }
+
+        form .part3 .four{
+            padding-top: 0.5em;
+            width: 100px;
+            border-radius: 10px;
+       }
+       form .part4 .four{
+            /* padding-top: 0.5em; */
+            width: 100px;
+            border-radius: 10px;
+       }
+       form .part5 .four{
+           
+            width: 100px;
+            border-radius: 10px;
+       }
+       
+       form .part6 .first{           
+            width: 80px;
+            border-radius: 10px;
+       }
+       form .part6 .second{
+        width: 80px;
+            border-radius: 10px;     
+       }
+       form .part6 .third{
+        width: 100px;
+        padding-left: 0;
+        margin-top: 0;
+        border-radius: 10px;     
+       }
+
+    </style>
+</head>
+<body>
+
+
+
+   <main class="main">
+    <div class="main_container">
+        <form>
+            <div class="part1">
+                <input type="text" name="result">              
+            </div>
+            <div class="part2">
+                <input  class="first" type="button"  value="/" onclick="result.value += '/' ">
+                <input class="second" type="button" value="DEL" onclick="result.value = result.value.toString().slice(0,-1) " >
+                <input  class="third" type="button" value="." onclick="result.value += '.' ">
+                <input  class="four" type="button" value="AC" onclick="result.value = '' ">
+            </div>
+            <div class="part3">
+                <input type="button"  value="7" onclick="result.value += '7' ">
+                <input type="button" value="8" onclick="result.value += '8' ">
+                <input type="button" value="9" onclick="result.value += '9' ">
+                <input class="four" type="button" value="*" onclick="result.value += '*' ">
+            </div>
+            <div class="part4">
+                <input type="button"  value="4" onclick="result.value += '4' " >
+                <input type="button" value="5" onclick="result.value += '5' ">
+                <input type="button" value="6" onclick="result.value += '6' ">
+                <input class="four" type="button" value="+" onclick="result.value += '+' ">
+            </div>
+            <div class="part5">
+                <input type="button"  value="1" onclick="result.value += '1' ">
+                <input type="button" value="2" onclick="result.value += '2' ">
+                <input type="button" value="3" onclick="result.value += '3' ">
+                <input class="four" type="button" value="-" onclick="result.value += '-' ">
+            </div>
+            <div class="part6">
+                <input class="first" type="button"  value="0" onclick="result.value += '0' " >
+                <input  class="second" type="button" value="00" onclick="result.value += '00' ">
+                <input  type="button" value="=" onclick="result.value = eval(result.value)"  class="third eval">               
+            </div>
+            
+        </form>
+    </div>
+   </main>
+    
+</body>
+</html>
